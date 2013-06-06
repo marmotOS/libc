@@ -58,7 +58,8 @@
 
 void _assert(const char *);
 
-#define assert(x) ((x) ? ((void) 0) : _assert(__FILE__ ":" _STR(__LINE__) ": Assertion '" #x "' failed.\n"))
+#define assert(x) ((x) ? ((void) 0) : _assert(__FILE__ ":" _STR(__LINE__) ": Assertion '" \
+					      #x "' failed.\n"))
 
 
 #endif
