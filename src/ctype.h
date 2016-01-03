@@ -2,7 +2,7 @@
  * ctype.h
  *
  *
- * Copyright (C) 2013-2015  Bryant Moscon - bmoscon@gmail.com
+ * Copyright (C) 2013-2016  Bryant Moscon - bmoscon@gmail.com
  * 
  * Please see the LICENSE file for the terms and conditions associated with 
  * the use of this software.
@@ -19,29 +19,29 @@
  */
 
 // Decimal Digit
-#define _DIGIT 0x1
+#define _D 0x1
 
 // Decimal AND Hex digits
-#define _HEXDIGIT 0x2
+#define _H 0x2
 
 // Lowercase
-#define _LOWER 0x4
+#define _L 0x4
 
 // Uppercase
-#define _UPPER 0x8
+#define _U 0x8
 
 
 
 
-unsigned char _ctype[256] = {
+static unsigned char _ctype[256] = {
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  _DIGIT,_DIGIT,_DIGIT,_DIGIT,_DIGIT,_DIGIT,_DIGIT,_DIGIT,_DIGIT,_DIGIT,0,0,0,0,0,0,
+  _D,_D,_D,_D,_D,_D,_D,_D,_D,_D,0,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+  0,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,
+  _L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -54,7 +54,8 @@ unsigned char _ctype[256] = {
 
 
 
-#define isdigit(x) (_ctype[(unsigned char) x] & _DIGIT)
+int isdigit(const int x);
+int islower(const int x);
 
 
 
