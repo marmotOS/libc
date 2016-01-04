@@ -26,5 +26,13 @@ int islower(const int x)
 
 int isupper(const int x)
 {
-    return (_ctype[(unsigned char) x] * _U);
+    return (_ctype[(unsigned char) x] & _U);
 }
+
+
+int isalnum(const int x)
+{
+    return (_ctype[(unsigned char) x] & (_D | _U | _L));
+}
+
+
