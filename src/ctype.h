@@ -9,8 +9,8 @@
  *
  */
  
-#ifndef _CTYPE_H
-#define _CTYPE_H
+#ifndef _CTYPE_H_
+#define _CTYPE_H_
 
 /* Use 256 entry, 8 bit per entry lookup table to identify properties of each
  * possible byte

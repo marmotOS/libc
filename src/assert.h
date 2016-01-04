@@ -2,15 +2,15 @@
  * assert.h
  *
  *
- * Copyright (C) 2013-2015  Bryant Moscon - bmoscon@gmail.com
+ * Copyright (C) 2013-2016  Bryant Moscon - bmoscon@gmail.com
  * 
  * Please see the LICENSE file for the terms and conditions associated with 
  * the use of this software.
  *
  */
  
-#ifndef _ASSERT_H
-#define _ASSERT_H
+#ifndef _ASSERT_H_
+#define _ASSERT_H_
 
 
 #undef assert
