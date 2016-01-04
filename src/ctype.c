@@ -36,3 +36,7 @@ int isalnum(const int x)
 }
 
 
+int isalpha(const int x)
+{
+    return (_ctype[(unsigned char) x] & (_U | _L));
+}
