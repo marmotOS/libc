@@ -14,11 +14,18 @@
 
 int isdigit(const int x)
 {
-    return (_ctype[(unsigned char) x] & _DIGIT);
+    return (_ctype[(unsigned char) x] & _D);
 }
 
 
 int islower(const int x)
 {
-    return (_ctype[(unsigned char) x] & _LOWER);
+    return (_ctype[(unsigned char) x] & _L);
+}
+
+
+
+int isupper(const int x)
+{
+    return (_ctype[(unsigned char) x] * _U);
 }
