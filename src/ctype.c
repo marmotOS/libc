@@ -12,21 +12,9 @@
 #include <ctype.h>
 
 
-int isdigit(const int x)
+int isalpha(const int x)
 {
-    return (_ctype[(unsigned char) x] & _D);
-}
-
-
-int islower(const int x)
-{
-    return (_ctype[(unsigned char) x] & _L);
-}
-
-
-int isupper(const int x)
-{
-    return (_ctype[(unsigned char) x] & _U);
+    return (_ctype[(unsigned char) x] & (_U | _L));
 }
 
 
@@ -36,7 +24,55 @@ int isalnum(const int x)
 }
 
 
-int isalpha(const int x)
+int iscntrl(const int x)
 {
-    return (_ctype[(unsigned char) x] & (_U | _L));
+    return (_ctype[(unsigned char) x] & (_B | _C));
+}
+
+
+int isdigit(const int x)
+{
+    return (_ctype[(unsigned char) x] & _D);
+}
+
+
+int isgraph(const int x)
+{
+    return (_ctype[(unsigned char) x] & (_D | _L | _U | _P));
+}
+
+
+int islower(const int x)
+{
+    return (_ctype[(unsigned char) x] & _L);
+}
+
+
+int isprint(const int x)
+{
+    return (_ctype[(unsigned char) x] & (_D | _L | _U | _P | _S));
+}
+
+
+int ispunct(const int x)
+{
+    return (_ctype[(unsigned char) x] & _P);
+}
+
+
+int isspace(const int x)
+{
+    return (_ctype[(unsigned char) x] & (_S | _C));
+}
+
+
+int isupper(const int x)
+{
+    return (_ctype[(unsigned char) x] & _U);
+}
+
+
+int isxdigit(const int x)
+{
+    return (_ctype[(unsigned char) x] & (_X | _D));
 }
