@@ -49,30 +49,17 @@
 #define _XU (_U | _X)
 
 
-static unsigned char _ctype[256] = {
-  0,_B,_B,_B,_B,_B,_B,_B,_B,_B,_C,_C,_C,_C,_C,_B,
-  _B,_B,_B,_B,_B,_B,_B,_B,_B,_B,_B,_B,_B,_B,_B,_B,
-  _S,_P,_P,_P,_P,_P,_P,_P,_P,_P,_P,_P,_P,_P,_P,_P,
-  _D,_D,_D,_D,_D,_D,_D,_D,_D,_D,0,0,0,0,0,0,
-  0,_XU,_XU,_XU,_XU,_XU,_XU,_U,_U,_U,_U,_U,_U,_U,_U,_U,
-  _U,_U,_U,_U,_U,_U,_U,_U,_U,_U,_U,0,0,0,0,0,
-  0,_XL,_XL,_XL,_XL,_XL,_XL,_L,_L,_L,_L,_L,_L,_L,_L,_L,
-  _L,_L,_L,_L,_L,_L,_L,_L,_L,_L,_L,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-};
-
-
-
+int isalpha(const int x);
+int isalnum(const int x);
+int iscntrl(const int x);
 int isdigit(const int x);
+int isgraph(const int x);
 int islower(const int x);
-
+int isprint(const int x);
+int ispunct(const int x);
+int isspace(const int x);
+int isupper(const int x);
+int isxdigit(const int x);
 
 
 #endif
