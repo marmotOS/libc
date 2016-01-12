@@ -2,7 +2,7 @@
  * test.c
  *
  *
- * Copyright (C) 2013-2015  Bryant Moscon - bmoscon@gmail.com
+ * Copyright (C) 2013-2016  Bryant Moscon - bmoscon@gmail.com
  * 
  * Please see the LICENSE file for the terms and conditions associated with 
  * the use of this software.
@@ -17,15 +17,39 @@
 
 int main()
 {
-  char i;
+    char i;
   
-  assert(1 == 1);
+    assert(1 == 1);
   
-  for (i = '0'; i <= '9'; ++i) {
-    assert(isdigit(i));
-  }
+    for (i = '0'; i <= '9'; ++i) {
+        assert(isdigit(i));
+        assert(isalnum(i));
+        assert(isxdigit(i));
+    }
 
-  printf("\n    ---- ALL TESTS PASSED ----\n\n");
+    for (i = 'A'; i <= 'F'; ++i) {
+        assert(isxdigit(i));
+    }
+
+    for (i = 'a'; i <= 'f'; ++i) {
+        assert(isxdigit(i));
+    }
+
+    for (i = 'A'; i <= 'Z'; ++i) {
+        assert(isalpha(i));
+        assert(isalnum(i));
+        assert(isupper(i));
+    }
+
+    for (i = 'a'; i <= 'z'; ++i) {
+        assert(isalpha(i));
+        assert(isalnum(i));
+        assert(islower(i));
+    }
+
+    
+
+    printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
-  return (0);
+    return (0);
 }
