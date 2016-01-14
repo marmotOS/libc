@@ -17,7 +17,8 @@
 
 int main()
 {
-    char i;
+    unsigned char i;
+    int j;
   
     assert(1 == 1);
   
@@ -45,6 +46,14 @@ int main()
         assert(isalpha(i));
         assert(isalnum(i));
         assert(islower(i));
+    }
+
+    for (j = 0; j < 256; ++j) {
+	if (j < 'A' || j > 'Z') {
+	    assert(j == tolower(j));
+	} else {
+	    assert(tolower(j) == j + ('a' - 'A'));
+	}
     }
 
     
