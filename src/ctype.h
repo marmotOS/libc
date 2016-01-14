@@ -60,6 +60,6 @@ int ispunct(const int x);
 int isspace(const int x);
 int isupper(const int x);
 int isxdigit(const int x);
-
+int tolower(const int x);
 
 #endif
