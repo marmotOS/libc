@@ -14,23 +14,23 @@
 
 #define DBL_DIG 
 #define DBL_EPSILON  
-#define DBL_MANT_DIG
+#define DBL_MANT_DIG     53
 #define DBL_MAX           
 #define DBL_MAX_10_EXP       
 #define DBL_MAX_EXP
 #define DBL_MIN         
 #define DBL_MIN_10_EXP       
 #define DBL_MIN_EXP
-#define FLT_DIG              
-#define FLT_EPSILON        
-#define FLT_MANT_DIG
+#define FLT_DIG          6   
+#define FLT_EPSILON       
+#define FLT_MANT_DIG     24
 #define FLT_MAX                
 #define FLT_MAX_10_EXP      
 #define FLT_MAX_EXP
 #define FLT_MIN              
 #define FLT_MIN_10_EXP      
 #define FLT_MIN_EXP
-#define FLT_RADIX             
+#define FLT_RADIX        2       
 #define FLT_ROUNDS
 #define LDBL_DIG             
 #define LDBL_EPSILON            
