@@ -61,5 +61,6 @@ int isspace(const int x);
 int isupper(const int x);
 int isxdigit(const int x);
 int tolower(const int x);
+int toupper(const int x);
 
 #endif
