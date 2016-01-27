@@ -56,7 +56,29 @@ int main()
 	}
     }
 
-    
+    for (j = 0; j < 256; ++j) {
+        if (j < 'a' || j > 'z') {
+            assert(j == toupper(j));
+        } else {
+            assert(toupper(j) == j - ('a' - 'A'));
+        }
+    }
+
+    assert(isalpha(-1) == 0);
+    assert(isalnum(-1) == 0);
+    assert(iscntrl(-1) == 0);
+    assert(isdigit(-1) == 0);
+    assert(isgraph(-1) == 0);
+    assert(islower(-1) == 0);
+    assert(isprint(-1) == 0);
+    assert(ispunct(-1) == 0);
+    assert(isspace(-1) == 0);
+    assert(isupper(-1) == 0);
+    assert(isxdigit(-1) == 0);
+    assert(tolower(-1) == 0);
+    assert(toupper(-1) == 0);
+
+
 
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
