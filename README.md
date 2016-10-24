@@ -21,7 +21,7 @@ Note this is not a complete implementation. Its a work in progress.
  - [ ] setjmp.h
  - [ ] signal.h
  - [ ] stdarg.h
- - [ ] stddef.h
+ - [x] stddef.h
  - [ ] stdio.h
  - [ ] stdlib.h
  - [ ] string.h
