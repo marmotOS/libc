@@ -11,7 +11,7 @@
  
 #include <assert.h>
 #include <ctype.h>
-
+#include <string.h>
 
 #include <stdio.h>
 
@@ -79,6 +79,9 @@ int main()
     assert(toupper(-1) == 0);
 
 
+    char array[5] = {'a', 'b', 'c', 'd', 'e'};
+    char *ptr = memchr(array, 'b', 5);
+    assert(*(ptr+1) == 'c');
 
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   

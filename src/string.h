@@ -12,7 +12,9 @@
 #ifndef __STRING__
 #define __STRING__
 
+#include <stddef.h>
 
+void *memchr(const void *, const int, const size_t);
 
 
 

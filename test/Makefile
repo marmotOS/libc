@@ -3,8 +3,8 @@
 # Bryant Moscon - June 2013
 #
 
-test: assert.o ctype.o test.c
-	gcc -ggdb3 -Wall -I../src/ -o test test.c assert.o ctype.o
+test: assert.o ctype.o string.o test.c
+	gcc -ggdb3 -Wall -I../src/ -o test test.c assert.o ctype.o string.o
 
 assert.o: ../src/assert.c ../src/assert.h
 	gcc -ggdb3 -Wall -I../src/ -c -o assert.o ../src/assert.c
@@ -12,6 +12,8 @@ assert.o: ../src/assert.c ../src/assert.h
 ctype.o: ../src/ctype.c ../src/ctype.h
 	gcc -ggdb3 -Wall -I../src/ -c -o ctype.o ../src/ctype.c
 
+string.o: ../src/string.c ../src/string.h
+	gcc -ggdb3 -Wall -I../src/ -c -o string.o ../src/string.c
 
 clean:
-	rm *.o test
+	rm -f *.o test
