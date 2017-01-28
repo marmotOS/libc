@@ -88,6 +88,9 @@ int main()
     assert(memcmp(array, array, 5) == 0);
     assert(memcmp(array2, array, 5) > 0);
 
+    memcpy(array, array2, 5);
+    assert(memcmp(array, array2, 5) == 0);
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);

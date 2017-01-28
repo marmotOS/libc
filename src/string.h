@@ -16,6 +16,7 @@
 
 void *memchr(const void *, const int, const size_t);
 int   memcmp(const void*, const void*, const size_t);
+void *memcpy(void *, const void*, const size_t);
 
 
 #endif

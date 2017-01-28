@@ -36,3 +36,15 @@ int memcmp(const void *a, const void *b, size_t len)
     }
     return (0);
 }
+
+
+void *memcpy(void *to, const void *from, const size_t len)
+{
+    const unsigned char *ptr = from;
+    unsigned char *dest = to;
+    for (size_t i = 0; i < len; ++i, ++ptr, ++dest) {
+        *dest = *ptr;
+    }
+
+    return (dest);
+}
