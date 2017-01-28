@@ -83,6 +83,11 @@ int main()
     char *ptr = memchr(array, 'b', 5);
     assert(*(ptr+1) == 'c');
 
+    char array2[5] = {'a', 'c', 'b', 'd', 'e'};
+    assert(memcmp(array, array2, 5) < 0);
+    assert(memcmp(array, array, 5) == 0);
+    assert(memcmp(array2, array, 5) > 0);
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);

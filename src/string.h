@@ -15,7 +15,7 @@
 #include <stddef.h>
 
 void *memchr(const void *, const int, const size_t);
-
+int   memcmp(const void*, const void*, const size_t);
 
 
 #endif

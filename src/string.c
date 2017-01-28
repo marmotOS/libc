@@ -16,10 +16,23 @@ void *memchr(const void *str, const int c, const size_t len)
 {
     const unsigned char *ptr = str;
     const unsigned char ch = c;
-    for (unsigned int i = 0; i < len; ++i, ++ptr) {
+    for (size_t i = 0; i < len; ++i, ++ptr) {
         if (*ptr == ch) {
             return (unsigned char *)(ptr);
         }
     }
     return (NULL);
+}
+
+
+int memcmp(const void *a, const void *b, size_t len)
+{
+    const unsigned char *ptr = a;
+    const unsigned char *ptr2 = b;
+    for (size_t i = 0; i < len; ++i, ++ptr, ++ptr2) {
+        if (*ptr != *ptr2) {
+            return (*ptr - *ptr2);
+        }
+    }
+    return (0);
 }
