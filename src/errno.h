@@ -13,7 +13,7 @@
 #define __ERRNO__
 
 #define EDOM 1
-#define EDOM 2
+#define ERANGE 2
 
 
 extern int errno;
