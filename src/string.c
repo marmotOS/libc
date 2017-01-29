@@ -48,3 +48,33 @@ void *memcpy(void *to, const void *from, const size_t len)
 
     return (dest);
 }
+
+
+void *memmove(void *to, const void *from, const size_t len)
+{
+    const unsigned char *ptr = from;
+    unsigned char *dest = to;
+
+    if (to == from) {
+        return (dest);
+    }
+
+    if ((ptr < dest) && (dest < (ptr + len))) {
+        /* address ranges overlap like so:
+        * <---- source --->
+        *        <---- dest ---->
+        * so need to copy in reverse
+        */
+        ptr += len;
+        dest += len;
+        for (size_t i = 0; i < len; ++i, --ptr, --dest) {
+            *dest = *ptr;
+        }
+    } else {
+        for (size_t i = 0; i < len; ++i, ++ptr, ++dest) {
+            *dest = *ptr;
+        }
+    }
+
+    return (dest);
+}
