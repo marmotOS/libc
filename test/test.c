@@ -91,6 +91,10 @@ int main()
     memcpy(array, array2, 5);
     assert(memcmp(array, array2, 5) == 0);
 
+    char test[10] = "aaaaabbbbb";
+    memmove(&test[0], &test[5], 5);
+    assert(memcmp(test, "bbbbbbbbbb", 10) == 0);
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);
