@@ -98,17 +98,17 @@ char *strcat(char *s1, const char* s2)
     char *ptr = s1;
     const char *ptr2 = s2;
      
-    while (ptr) {
+    while (*ptr) {
         ++ptr;
     }
 
-    while (ptr2) {
+    while (*ptr2) {
         *ptr = *ptr2;
         ++ptr;
         ++ptr2;
     }
 
     *ptr = NULL;
-    
+
     return (s1);
 }

@@ -99,6 +99,11 @@ int main()
         assert(test[i] == NULL);
     }
 
+    char test_[7] = "abc";
+    char test_2[4] = "def"; 
+    strcat(test_, test_2);
+    assert(memcmp(test_, "abcdef", 6) == 0);
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);
