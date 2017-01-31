@@ -16,7 +16,7 @@
 #define size_t       unsigned long int
 #define ptrdiff_t    long int
 #define wchar_t      int
-#define NULL         (void *)0
+#define NULL         (0)
 
 
 #endif

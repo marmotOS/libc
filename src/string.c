@@ -83,7 +83,7 @@ void *memmove(void *to, const void *from, const size_t len)
 void *memset(void *ptr, const int val, const size_t len)
 {
     const unsigned char c = val;
-    unsigned char *dest;
+    unsigned char *dest = ptr;
 
     for (size_t i = 0; i < len; ++i, ++dest) {
         *dest = c;

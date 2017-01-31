@@ -94,6 +94,10 @@ int main()
     char test[10] = "aaaaabbbbb";
     memmove(&test[0], &test[5], 5);
     assert(memcmp(test, "bbbbbbbbbb", 10) == 0);
+    memset(test, NULL, 10);
+    for (size_t i = 0; i < 10; ++i) {
+        assert(test[i] == NULL);
+    }
 
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   

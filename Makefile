@@ -21,7 +21,7 @@ shared: $(OBJ)
 	$(CC) -shared -o $(SO) -Wl,-soname,$(SO) $(OBJ)
 
 test: $(OBJ) test/test.c
-	$(CC) -o libc_test test/test.c $(OBJ)
+	$(CC) -o libc_test $(CCFLAGS) test/test.c $(OBJ)
 
 %.o: %.c $(HEADERS) Makefile
 	$(CC) $(CCFLAGS) -c $< -o $@
