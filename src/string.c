@@ -91,3 +91,24 @@ void *memset(void *ptr, const int val, const size_t len)
 
     return (ptr);
 }
+
+
+char *strcat(char *s1, const char* s2)
+{
+    char *ptr = s1;
+    const char *ptr2 = s2;
+     
+    while (ptr) {
+        ++ptr;
+    }
+
+    while (ptr2) {
+        *ptr = *ptr2;
+        ++ptr;
+        ++ptr2;
+    }
+
+    *ptr = NULL;
+    
+    return (s1);
+}
