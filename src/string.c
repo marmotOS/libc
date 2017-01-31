@@ -46,7 +46,7 @@ void *memcpy(void *to, const void *from, const size_t len)
         *dest = *ptr;
     }
 
-    return (dest);
+    return (to);
 }
 
 
@@ -76,7 +76,7 @@ void *memmove(void *to, const void *from, const size_t len)
         }
     }
 
-    return (dest);
+    return (to);
 }
 
 
