@@ -20,5 +20,7 @@ void *memcpy(void *, const void*, const size_t);
 void *memmove(void *, const void *, const size_t);
 void *memset(void *, const int, const size_t);
 
+char *strcat(char*, const char*);
+
 
 #endif
