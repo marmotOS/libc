@@ -89,5 +89,5 @@ void *memset(void *ptr, const int val, const size_t len)
         *dest = c;
     }
 
-    return (dest);
+    return (ptr);
 }
