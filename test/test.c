@@ -104,6 +104,13 @@ int main()
     strcat(test_, test_2);
     assert(memcmp(test_, "abcdef", 6) == 0);
 
+    assert(*(strchr(test_, 'f')) == 'f');
+    assert(*(strchr(test_, 'f')+1) == NULL);
+    assert(*(strchr(test_, 'f')-1) == 'e');
+    assert(strchr(test_, 'z') == NULL);
+
+
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);
