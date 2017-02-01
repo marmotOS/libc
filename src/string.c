@@ -112,3 +112,18 @@ char *strcat(char *s1, const char* s2)
 
     return (s1);
 }
+
+
+char *strchr(const char* str, const int c)
+{
+    const char ch = c;
+    const char *ptr = str;
+
+    while(*ptr) {
+        if (*ptr == ch) {
+            return ((char *)ptr);
+        }
+        ++ptr;
+    }
+    return (NULL);
+}

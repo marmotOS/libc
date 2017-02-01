@@ -21,6 +21,7 @@ void *memmove(void *, const void *, const size_t);
 void *memset(void *, const int, const size_t);
 
 char *strcat(char*, const char*);
+char *strchr(const char*, const int);
 
 
 #endif
