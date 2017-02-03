@@ -109,6 +109,13 @@ int main()
     assert(*(strchr(test_, 'f')-1) == 'e');
     assert(strchr(test_, 'z') == NULL);
 
+    {
+        char test[5] = "abc";
+        char test2[5] = "a";
+        assert(strcmp(test, test) == 0);
+        assert(strcmp(test, test2) == 1);
+        assert(strcmp(test2, test) == -1);
+    }
 
 
     printf("\n    ---- ALL TESTS PASSED ----\n\n");

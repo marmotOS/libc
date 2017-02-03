@@ -127,3 +127,17 @@ char *strchr(const char* str, const int c)
     }
     return (NULL);
 }
+
+
+int strcmp(const char* s1, const char* s2)
+{
+    while (*s1 == *s2) {
+        if (*s1 == NULL) {
+            return (0);
+        }
+        ++s1;
+        ++s2;
+    }
+    
+    return ((*s1 < *s2) ? -1 : 1);          
+}
