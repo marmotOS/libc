@@ -117,6 +117,15 @@ int main()
         assert(strcmp(test2, test) == -1);
     }
 
+    {
+        char test[10];
+        char test2[5] = "abc";
+
+        char *ptr = strcpy(test, test2);
+        assert(strcmp(ptr, test2) == 0);
+        assert(strcmp(test2, test) == 0);
+        assert(strcmp(test, "abc") == 0);
+    }
 
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   

@@ -141,3 +141,16 @@ int strcmp(const char* s1, const char* s2)
     
     return ((*s1 < *s2) ? -1 : 1);          
 }
+
+
+char *strcpy(char *dest, const char* source)
+{
+    char *ptr = dest;
+
+    while (*source) {
+        *ptr++ = *source++;
+    }
+    *ptr = NULL;
+
+    return (dest);
+}
