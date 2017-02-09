@@ -171,3 +171,12 @@ size_t strcspn(const char* str1, const char *str2)
     
     return (NULL);
 }
+
+
+size_t strlen(const char* str)
+{
+    size_t i;
+    for (i = 0; str[i]; ++i) ;
+
+    return (i);
+}

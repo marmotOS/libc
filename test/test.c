@@ -133,6 +133,11 @@ int main()
         assert(strcspn(match, string) == 6);
     }
 
+    {
+        char string[5] = "ab";
+        assert(strlen(string) == 2);
+    }
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);
