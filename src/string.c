@@ -154,3 +154,20 @@ char *strcpy(char *dest, const char* source)
 
     return (dest);
 }
+
+
+size_t strcspn(const char* str1, const char *str2)
+{
+    const char *match = str1;
+
+    while (match) {
+        for (size_t i = 0; str2[i]; ++i) {
+            if (*match == str2[i]) {
+                return (i);
+            }
+        }
+        ++match;
+    }
+    
+    return (NULL);
+}

@@ -127,6 +127,12 @@ int main()
         assert(strcmp(test, "abc") == 0);
     }
 
+    {
+        char match[10] = "abcdefg";
+        char string[20] = "zzfzzzazzczb";
+        assert(strcspn(match, string) == 6);
+    }
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);
