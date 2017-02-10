@@ -138,6 +138,13 @@ int main()
         assert(strlen(string) == 2);
     }
 
+    {
+        char string[30] = "Hello ";
+        char string2[10] = "World!!!!";
+        assert(strcmp(strncat(string, string2, 5), "Hello World") == 0);
+        assert(strlen(string) == 11);
+    }
+
     printf("\n    ---- ALL TESTS PASSED ----\n\n");
   
     return (0);

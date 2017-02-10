@@ -180,3 +180,26 @@ size_t strlen(const char* str)
 
     return (i);
 }
+
+
+char *strncat(char *str1, const char* str2, const size_t n)
+{
+    char *ptr = str1;
+    const char *ptr2 = str2;
+    size_t i = 0;
+     
+    while (*ptr) {
+        ++ptr;
+    }
+
+    while (*ptr2 && i < n) {
+        *ptr = *ptr2;
+        ++ptr;
+        ++ptr2;
+        ++i;
+    }
+
+    *ptr = NULL;
+
+    return (str1);
+}
