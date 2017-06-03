@@ -10,6 +10,7 @@
  */
 
 #include <string.h>
+#include <errno.h>
 
 
 void *memchr(const void *str, const int c, const size_t len)
@@ -132,7 +133,7 @@ char *strchr(const char* str, const int c)
 int strcmp(const char* s1, const char* s2)
 {
     while (*s1 == *s2) {
-        if (*s1 == NULL) {
+        if (!(*s1)) {
             return (0);
         }
         ++s1;
@@ -203,3 +204,60 @@ char *strncat(char *str1, const char* str2, const size_t n)
 
     return (str1);
 }
+
+
+char *strerror(const int err)
+{
+    switch (err) {
+        case 0:
+            return("No Error");
+        case EDOM:
+            return("Domain Error");
+        case ERANGE:
+            return("Range Error");
+        default:
+            return("Invalid error code");
+    }
+}
+
+int strncmp(const char* str1, const char* str2, const size_t n)
+{
+    for (size_t len = 0; (*str1 == *str2) && (len < n); ++str1, ++str2, ++len) {
+        if (!(*str1)) {
+            return (0);
+        }
+    }
+
+    return ((*str1 < *str2) ? -1 : 1);       
+}
+
+
+char *strncpy(char* dest, const char* src, const size_t n)
+{
+    char *s = dest;
+    size_t len;
+    for (len = 0; (*src) && (len < n); ++src, ++len) {
+        *s = *src;
+    }
+
+    while (len < n) {
+        *s++ = NULL;
+        ++len;
+    }
+
+    return (dest);
+}
+
+
+/* TO DO
+int strcoll(const char* str1, const char* str2)
+{
+    return 0;
+}
+char  *strpbrk(const char*, const char*);
+char  *strrchr(const char*, const int);
+size_t strspn(const char*, const char*);
+char  *strstr(const char*, const char*);
+char  *strtok(char*, const char*);
+size_t strxfrm(char*, const char*, const size_t);
+*/
