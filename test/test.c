@@ -125,6 +125,11 @@ int main()
         assert(strcmp(ptr, test2) == 0);
         assert(strcmp(test2, test) == 0);
         assert(strcmp(test, "abc") == 0);
+
+        char test3[10];
+        ptr = strncpy(test3, test2, 2);
+        assert(strcmp(test2, ptr) != 0);
+        assert(strcmp(test3, "ab") == 0);
     }
 
     {
@@ -143,6 +148,15 @@ int main()
         char string2[10] = "World!!!!";
         assert(strcmp(strncat(string, string2, 5), "Hello World") == 0);
         assert(strlen(string) == 11);
+    }
+
+    {
+        char string[30] = "Hello World";
+        char string2[30] = "Hello Woa";
+        char string3[30] = "Hello Wos";
+        assert(strncmp(string, string2, 8) == 0);
+        assert(strncmp(string, string2, 9) == 1);
+        assert(strncmp(string, string3, 9) == -1);
     }
 
     printf("\n    ---- ALL TESTS PASSED ----\n\n");

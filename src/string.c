@@ -220,15 +220,18 @@ char *strerror(const int err)
     }
 }
 
+
 int strncmp(const char* str1, const char* str2, const size_t n)
 {
-    for (size_t len = 0; (*str1 == *str2) && (len < n); ++str1, ++str2, ++len) {
+    for (size_t len = 0; len < n; ++str1, ++str2, ++len) {
+        if (*str1 != *str2) {
+            return ((*str1 < *str2) ? -1 : 1);
+	    }
         if (!(*str1)) {
             return (0);
         }
     }
-
-    return ((*str1 < *str2) ? -1 : 1);       
+    return (0);
 }
 
 
@@ -237,7 +240,7 @@ char *strncpy(char* dest, const char* src, const size_t n)
     char *s = dest;
     size_t len;
     for (len = 0; (*src) && (len < n); ++src, ++len) {
-        *s = *src;
+        *s++ = *src;
     }
 
     while (len < n) {
