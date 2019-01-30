@@ -13,6 +13,8 @@
 #define __SIGNAL__
 
 
+typedef int sig_atomic_t;
+
 
 
 #endif
